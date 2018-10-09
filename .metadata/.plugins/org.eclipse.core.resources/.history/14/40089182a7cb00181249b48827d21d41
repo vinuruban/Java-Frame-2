@@ -1,0 +1,57 @@
+import java.awt.*;
+
+public class Window {
+
+	public static void main(String[] args) {
+		
+		//Instantiation
+		Frame F = new Frame ("Calculator");
+		Button B1,B2,B3,B4;
+		TextField T1,T2,T3; 
+		Label L1,L2,L3;
+		
+		B1 = new Button("+");
+		B2 = new Button("-");
+		B3 = new Button("*");
+		B4 = new Button("/");
+		
+		T1 = new TextField();
+		T2 = new TextField();
+		T3 = new TextField();
+		
+		L1 = new Label("No1: ");
+		L2 = new Label("No2: ");
+		L3 = new Label("Result: ");
+		
+		Operations E = new Operations(T1,T2,T3);
+		
+		B1.addActionListener(E);
+		B2.addActionListener(E);
+		B3.addActionListener(E);
+		B4.addActionListener(E);
+		
+		//Frame settings
+		F.add(L1);
+		F.add(T1);
+		F.add(L2);
+		F.add(T2);
+		F.add(B1);
+		F.add(B2);
+		F.add(B3);
+		F.add(B4);
+		F.add(L3);
+		F.add(T3);
+		
+		T1.setPreferredSize( new Dimension( 200, 24 ) );
+		T2.setPreferredSize( new Dimension( 200, 24 ) );
+		T3.setPreferredSize( new Dimension( 200, 24 ) );
+		
+		F.setSize(400,400);
+		F.setLayout(new FlowLayout());
+		F.setTitle("Calculator");
+		F.setBackground(Color.BLUE);
+		F.setVisible(true);
+
+	}
+
+}

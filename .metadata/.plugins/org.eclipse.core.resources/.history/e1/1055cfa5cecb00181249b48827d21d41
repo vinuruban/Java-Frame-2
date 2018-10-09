@@ -1,0 +1,33 @@
+import java.sql.*;
+
+public class JDBC {
+
+	public static void main(String[] args) {
+		
+		Connection con = null;
+		Statement stmnt = null;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/sakila", "root", "password");
+			stmnt = con.createStatement();
+			ResultSet R = stmnt.executeQuery("SELECT * FROM sakila.actor"); 
+			
+			while (R.next()) {
+				System.out.println(R.getInt("ID: " + "actor_id"));
+				System.out.println(R.getString("Firstname: " + "first_name"));
+				System.out.println(R.getString("Firstname: " +"last_name"));
+//				System.out.println(R.getString("last_update"));
+			}
+			
+			R.close();
+			stmnt.close();
+			con.close();
+		}
+		
+		catch(Exception se) {
+			
+		}
+	}
+	
+}

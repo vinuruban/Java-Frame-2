@@ -1,0 +1,80 @@
+import java.awt.*;
+
+public class Windows {
+public static void main(String[] args) {
+		
+		//Instantiation
+		Frame F = new Frame ("Casio");
+        F.setLayout(new FlowLayout());
+
+        // Create two panels
+        Panel p1 = new Panel();
+        Panel p2 = new Panel();
+
+        p1.setLayout(new FlowLayout());
+        p2.setLayout(new GridLayout(4,4));
+		TextField T1;
+		Button zero,one,two,three,four,five,six,seven,eight,nine,plus,minus,times,equal,C,divide;
+//		Operations E;
+		
+		zero = new Button("0");
+		one = new Button("1");
+		two = new Button("2");
+		plus = new Button("+");
+		three = new Button("3");
+		four = new Button("4");
+		five = new Button("5");
+		minus = new Button("-");
+		six = new Button("6");
+		seven = new Button("7");
+		eight = new Button("8");
+		times = new Button("x");
+		nine = new Button("9");
+		equal = new Button("=");
+		C = new Button("C");
+		divide = new Button("/");
+		
+		T1 = new TextField();
+		
+		
+		//Button settings
+//		E = new Operations(T1,T2,T3);
+		
+//		B1.addActionListener(E);
+//		B2.addActionListener(E);
+//		B3.addActionListener(E);
+//		B4.addActionListener(E);
+		
+		F.add(p1);
+		F.add(p2);
+		
+		//Frame settings
+		p1.add(T1);
+		p2.add(zero);
+		p2.add(one);
+		p2.add(two);
+		p2.add(plus);
+		p2.add(three);
+		p2.add(four);
+		p2.add(five);
+		p2.add(minus);
+		p2.add(six);
+		p2.add(seven);
+		p2.add(eight);
+		p2.add(times);
+		p2.add(nine);
+		p2.add(equal);
+		p2.add(C);
+		p2.add(divide);
+		
+
+		
+		T1.setPreferredSize( new Dimension( 200, 24 ) );
+		
+		F.setSize(400,400);
+//		F.setLayout(new FlowLayout());
+		F.setTitle("Calculator");
+		F.setBackground(Color.GRAY);
+		F.setVisible(true);
+	}
+}

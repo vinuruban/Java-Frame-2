@@ -1,0 +1,47 @@
+import java.awt.event.*;
+import java.awt.*;
+
+public class Operations implements ActionListener {
+	
+	TextField TT1,TT2,TT3;
+	
+	public Operations(TextField A, TextField B, TextField C) {
+		TT1 = A;
+		TT2 = B;
+		TT3 = C;
+	}
+	
+	public void actionPerformed(ActionEvent x) {
+		
+		Button btn;
+		float X,Y,Z;
+		X=Y=Z = 0;
+		String ans;
+		String titleBtn;
+		
+		X = Integer.parseInt(TT1.getText());
+		Y = Integer.parseInt(TT2.getText());
+		
+		btn = (Button)x.getSource();
+		titleBtn = btn.getLabel();
+		
+		if (titleBtn.equals("+")) {
+			Z = X+Y;
+		}
+			
+		if (titleBtn.equals("-")) {
+			Z = X-Y;
+		}
+		
+		if (titleBtn.equals("*")) {
+			Z = X*Y;
+		}	
+		if (titleBtn.equals("/")) {
+			Z = X/Y;
+		}
+		
+		ans = Float.toString(Z);
+		TT3.setText(ans);
+	}
+
+}

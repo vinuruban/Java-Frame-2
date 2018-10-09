@@ -1,0 +1,22 @@
+import java.awt.event.*;
+import java.awt.*;
+
+public class Operations implements ActionListener {
+	
+	TextField TT1,TT2,TT3;
+	
+	public Operations(TextField A, TextField B, TextField C) {
+		TT1 = A;
+		TT2 = B;
+		TT3 = C;
+	}
+	
+	public void actionPerformed(ActionEvent x) {
+		int X,Y,Z;
+		X=Y=Z = 0;
+		
+		X = Integer.parseInt(TT1.getText());
+		Y = Integer.parseInt(TT2.getText());
+	}
+
+}
